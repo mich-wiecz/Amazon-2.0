@@ -57,15 +57,21 @@ function Header() {
                         </p>
                         <p className="font-extrabold md:text-sm">Account & Lists</p>
                     </div>
-                    <div className="link">
-                        <p>
-                            Returns
-                        </p>
-                        <p className="font-extrabold md:text-sm">
-                            & Orders
-                        </p>
-                    </div>
+                    {
+                        session &&
+                        <Link href="/orders">
+                        <div className="link">
+                            <p>
+                                Returns
+                            </p>
+                            <p className="font-extrabold md:text-sm">
+                                & Orders
+                            </p>
+                        </div>
+                      </Link>
+                    }
                   
+                   
                     <Link href="/checkout">
                         <div 
                         className="relative link flex items-center"
